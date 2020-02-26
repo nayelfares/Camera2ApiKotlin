@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.graphics.ImageFormat
 import android.graphics.SurfaceTexture
 import android.hardware.camera2.*
@@ -20,7 +21,11 @@ import android.view.TextureView
 import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
+import android.widget.VideoView
 import androidx.core.content.ContextCompat
+import com.sherazkhilji.videffects.DuotoneEffect
+import com.sherazkhilji.videffects.view.VideoSurfaceView
+import kotlinx.android.synthetic.main.activity_main.*
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -146,6 +151,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         createVideoFolder()
         createImageFolder()
+//        var videoView= textureView as VideoSurfaceView
+//        videoView.init(null, DuotoneEffect(Color.YELLOW, Color.RED))
+
+
         mTextureView = findViewById<View>(R.id.textureView) as TextureView
         mRecordImageButton = findViewById<View>(R.id.videoOnlineImageButton) as ImageButton
         mRecordImageButton!!.setOnClickListener {
